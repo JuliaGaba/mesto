@@ -9,7 +9,7 @@
 Процесс работы был разделен на части.
 В ходе работы были использованны такие методы и технологии как флексбокс-вёрстка, грид-вёрстка, адаптивная вёрстка для различных разрешениях, позиционирование блоков и элементов, продвинутая семантика языка HTML, CSS, JavaScript, псевдоклассы, методолгия БЭМ, всплывающие окна с формой.
 
-## [Ссылка на проект &rarr;](https://juliagaba.github.io/russian-travel/index.html)
+## [Ссылка на проект &rarr;](https://juliagaba.github.io/mesto/index.html)
 
 ## [Макет в Figma](https://www.figma.com/file/2cn9N9jSkmxD84oJik7xL7/JavaScript.-Sprint-4?node-id=0%3A1)
 
