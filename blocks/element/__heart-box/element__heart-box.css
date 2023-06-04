@@ -1,0 +1,6 @@
+.element__heart-box {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding-right: 30px;
+}

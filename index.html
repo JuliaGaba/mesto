@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Путешествия по&nbsp;России</title>
+  <link rel="stylesheet" href="pages/index.css"> </head>
+
+<body class="body">
+  <div class="page">
+    <header class="header">
+      <div class="header__logo"></div>
+    </header>
+    <main class="content">
+      <section class="profile">
+        <div class="profile__card"> <img src="/images/zhak-img.jpg" alt="" class="profile__avatar">
+          <div class="profile__info">
+            <div class="profile__text">
+              <h1 class="profile__title">Жак-Ив Кусто</h1>
+              <p class="profile__subtitle">Исследователь океана</p>
+            </div>
+            <button type="button" class="profile__edit-button"></button>
+          </div>
+        </div>
+        <button type="button" class="profile__add-button"></button>
+      </section>
+      <section class="elements">
+        <ul class="elements__grid">
+          <li class="element"> <img src="/images/kirill-pershin-1088404-unsplash.jpg" alt="Карачаевск" class="element__image">
+            <div class="element__bottom-box">
+              <h2 class="element__title">Карачаевск</h2>
+              <div class="element__heart-box">
+                <div class="elment__heart-icon"></div>
+                <div class="element__heart-count"></div>
+              </div>
+            </div>
+          </li>
+          <li class="element"> <img src="/images/kirill-pershin-1404681-unsplash.jpg" alt="Гора Эльбрус" class="element__image">
+            <div class="element__bottom-box">
+              <h2 class="element__title">Гора Эльбрус</h2>
+              <div class="element__heart-box">
+                <div class="elment__heart-icon"></div>
+                <div class="element__heart-count"></div>
+              </div>
+            </div>
+          </li>
+          <li class="element"> <img src="/images/kirill-pershin-1556355-unsplash.jpg" alt="Домбай" class="element__image">
+            <div class="element__bottom-box">
+              <h2 class="element__title">Домбай</h2>
+              <div class="element__heart-box">
+                <div class="elment__heart-icon"></div>
+                <div class="element__heart-count"></div>
+              </div>
+            </div>
+          </li>
+          <li class="element"> <img src="/images/kirill-pershin-1404681-unsplash.jpg" alt="Гора Эльбрус" class="element__image">
+            <div class="element__bottom-box">
+              <h2 class="element__title">Гора Эльбрус</h2>
+              <div class="element__heart-box">
+                <div class="elment__heart-icon"></div>
+                <div class="element__heart-count"></div>
+              </div>
+            </div>
+          </li>
+          <li class="element"> <img src="/images/kirill-pershin-1556355-unsplash.jpg" alt="Домбай" class="element__image">
+            <div class="element__bottom-box">
+              <h2 class="element__title">Домбай</h2>
+              <div class="element__heart-box">
+                <div class="elment__heart-icon"></div>
+                <div class="element__heart-count"></div>
+              </div>
+            </div>
+          </li>
+          <li class="element"> <img src="/images/kirill-pershin-1404681-unsplash.jpg" alt="" class="element__image">
+            <div class="element__bottom-box">
+              <h2 class="element__title">Карачаевск</h2>
+              <div class="element__heart-box">
+                <div class="elment__heart-icon"></div>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer class="footer">
+      <p class="footer__copyright">&copy;2023 Mesto Russia</p>
+    </footer>
+    <div class="popup">
+      <div class="popup__container">
+        <button class="popup__close" type="button"></button>
+        <form class="popup__form">
+          <h3 class="popup__title">Редактировать профиль</h3>
+          <label>
+            <input class="popup__input popup__input_type_title" required minlength="2" type="text" name="title" placeholder="Введите имя"> </label>
+          <label>
+            <input class="popup__input popup__input_type_subtitle" required minlength="2" type="text" name="subtitle" placeholder="Расскажите о себе"> </label>
+          <button class="popup__save" type="submit">Сохранить</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <script src="./index.js"></script>
+</body>
+
+</html>
