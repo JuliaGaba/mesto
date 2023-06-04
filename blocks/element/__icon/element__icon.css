@@ -1,0 +1,17 @@
+.elment__icon {
+  background-image: url(../../../images/Vector.svg);
+  width: 22px;
+  height: 19px;
+  align-self: center;
+  cursor: pointer;
+}
+
+.elment__icon:hover {
+  transition: 0.3s ease;
+  opacity: 0.6;
+}
+
+.elment__icon:active {
+  background-image: url(../../../images/black-heart.svg);
+  opacity: 0;
+}
