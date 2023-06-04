@@ -1,6 +1,27 @@
 .element__heart {
+  background-image: url(../../../../images/Vector.svg);
+  width: 22px;
+  height: 19px;
+  align-self: center;
+  cursor: pointer;
   display: flex;
   justify-content: end;
   align-items: center;
-  padding-right: 30px;
+  margin-right: 30px;
+}
+
+.element__heart:hover {
+  transition: 0.3s ease;
+  opacity: 0.6;
+}
+
+.element__heart:active {
+  background-image: url(../../../../images/black-heart.svg);
+  opacity: 0;
+}
+
+@media screen and (max-width: 321px) {
+  .element__heart {
+    margin-right: 20px;
+ }
 }
