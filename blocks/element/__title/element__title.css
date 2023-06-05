@@ -6,5 +6,8 @@
   font-family: "Inter", "Arial ", sans-serif;
   margin-top: 22px;
   color: black;
-  max-width: 224px;
+  max-width: 200px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
 }
