@@ -1,5 +1,5 @@
 .element__heart {
-  background-image: url(../../../images/Vector.svg);
+  background-image: url(../../../images/vector.svg);
   width: 22px;
   height: 19px;
   align-self: center;
@@ -8,11 +8,13 @@
   justify-content: end;
   align-items: center;
   margin-right: 30px;
+  border: 0;
+  background-color: #fff;
 }
 
 .element__heart:hover {
   transition: 0.3s ease;
-  opacity: 0.6;
+  opacity: 0.5;
 }
 
 .element__heart:active {

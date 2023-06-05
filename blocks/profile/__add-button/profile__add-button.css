@@ -12,7 +12,12 @@
 
 @media screen and (max-width: 620px) {
   .profile__add-button {
-    margin: 36px 0;
+    margin: 36px 0 16px 0;
+    background-image: url(../../../images/add-button-mobil.svg);
+    background-repeat: no-repeat;
+    background-size: contain;
+    height: 53px;
+    width: 282px;
  }
 }
 

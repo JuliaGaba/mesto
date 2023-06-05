@@ -2,8 +2,9 @@
   line-height: 29.05px;
   font-size: 24px;
   font-weight: 900;
-  margin-left: 21px;
+  margin: 25px 0 31px 21px;
   font-family: "Inter", "Arial ", sans-serif;
   margin-top: 22px;
   color: black;
+  max-width: 224px;
 }

@@ -1,12 +1,10 @@
 <!DOCTYPE html>
 <html lang="ru">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mesto</title>
   <link rel="stylesheet" href="pages/index.css"> </head>
-
 <body class="body">
   <div class="page">
     <header class="header">
@@ -14,7 +12,7 @@
     </header>
     <main class="content">
       <section class="profile">
-        <div class="profile__card"> <img src="./images/zhak-img-min.jpg" alt="" class="profile__avatar">
+        <div class="profile__card"> <img src="./images/zhak-img-min.jpg" alt="Фото профиля" class="profile__avatar">
           <div class="profile__info">
             <div class="profile__text">
               <h1 class="profile__title">Жак-Ив Кусто</h1>
@@ -28,39 +26,39 @@
       <section class="elements">
         <ul class="elements__grid">
           <li class="element"> <img src="./images/kirill-pershin-1088404-unsplash-min.jpg" alt="Карачаевск" class="element__image">
-            <div class="element__bottom-box">
+            <div class="element__box">
               <h2 class="element__title">Карачаевск</h2>
-              <div class="element__heart"></div>
+              <button class="element__heart" type="button"></button>
             </div>
           </li>
           <li class="element"> <img src="./images/kirill-pershin-1404681-unsplash-min.jpg" alt="Гора Эльбрус" class="element__image">
-            <div class="element__bottom-box">
+            <div class="element__box">
               <h2 class="element__title">Гора Эльбрус</h2>
-              <div class="element__heart"></div>
+              <button class="element__heart" type="button"></button>
             </div>
           </li>
           <li class="element"> <img src="./images/kirill-pershin-1556355-unsplash-min.jpg" alt="Домбай" class="element__image">
-            <div class="element__bottom-box">
+            <div class="element__box">
               <h2 class="element__title">Домбай</h2>
-              <div class="element__heart"></div>
+              <button class="element__heart" type="button"></button>
             </div>
           </li>
           <li class="element"> <img src="./images/kirill-pershin-1404681-unsplash-min.jpg" alt="Гора Эльбрус" class="element__image">
-            <div class="element__bottom-box">
+            <div class="element__box">
               <h2 class="element__title">Гора Эльбрус</h2>
-              <div class="element__heart"></div>
+              <button class="element__heart" type="button"></button>
             </div>
           </li>
           <li class="element"> <img src="./images/kirill-pershin-1556355-unsplash-min.jpg" alt="Домбай" class="element__image">
-            <div class="element__bottom-box">
+            <div class="element__box">
               <h2 class="element__title">Домбай</h2>
-              <div class="element__heart"></div>
+              <button class="element__heart" type="button"></button>
             </div>
           </li>
           <li class="element"> <img src="./images/kirill-pershin-1404681-unsplash-min.jpg" alt="" class="element__image">
-            <div class="element__bottom-box">
+            <div class="element__box">
               <h2 class="element__title">Карачаевск</h2>
-              <div class="element__heart"></div>
+              <button class="element__heart" type="button"></button>
             </div>
           </li>
         </ul>
@@ -72,8 +70,8 @@
     <div class="popup">
       <div class="popup__container">
         <button class="popup__close" type="button"></button>
-        <form class="popup__form">
-          <h3 class="popup__title">Редактировать профиль</h3>
+        <form class="popup__form" name="name">
+          <h3 class="popup__title">Редактировать&nbsp;профиль</h3>
           <label>
             <input class="popup__input popup__input_type_title" required minlength="2" type="text" name="title" placeholder="Введите имя"> </label>
           <label>
@@ -83,6 +81,6 @@
       </div>
     </div>
   </div>
-  <script src="./index.js"></script>
+  <script src="./javascript/index.js"></script>
 </body>
 </html>

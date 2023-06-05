@@ -12,6 +12,7 @@
   .header {
     padding: 0;
     margin: 0 auto;
+    min-height: 83.2px;
  }
 }
 @media screen and (min-width: 321px) and (max-width: 1260px) {

@@ -7,10 +7,7 @@
   border-radius: 10px;
   padding: 34px 36px 37px;
   box-sizing: border-box;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  position: relative;
   color: black;
   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.15);
 }

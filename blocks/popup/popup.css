@@ -8,4 +8,6 @@
   display: none;
   transition: 0.3s all;
   font-family: 'Inter', Arial, Helvetica, sans-serif;
+  align-items: center;
+  justify-content: center;
 }

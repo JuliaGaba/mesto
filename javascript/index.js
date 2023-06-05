@@ -11,13 +11,13 @@ let editJob = document.querySelector('.profile__subtitle');
 
 
 function openPopup() {
-  popup.classList.add('popup__opened'); //классы которых нет в HTML мы добавляем без точки.
+  popup.classList.add('popup_opened'); //классы которых нет в HTML мы добавляем без точки.
   nameInput.value = editName.textContent;
   jobInput.value = editJob.textContent;
 }
 
 function closePopup() {
-  popup.classList.remove('popup__opened');
+  popup.classList.remove('popup_opened');
 }
 
 function handleFormSubmit (evt) {
