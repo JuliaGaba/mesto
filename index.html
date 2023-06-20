@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="ru">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Mesto</title>
   <link rel="stylesheet" href="pages/index.css"> </head>
+
 <body class="body">
   <div class="page">
     <header class="header">
@@ -24,44 +26,7 @@
         <button type="button" class="profile__add-button"></button>
       </section>
       <section class="elements">
-        <ul class="elements__grid">
-          <li class="element"> <img src="./images/kirill-pershin-1088404-unsplash-min.jpg" alt="Карачаевск" class="element__image">
-            <div class="element__box">
-              <h2 class="element__title">Карачаевск</h2>
-              <button class="element__heart" type="button"></button>
-            </div>
-          </li>
-          <li class="element"> <img src="./images/kirill-pershin-1404681-unsplash-min.jpg" alt="Гора Эльбрус" class="element__image">
-            <div class="element__box">
-              <h2 class="element__title">Гора Эльбрус</h2>
-              <button class="element__heart" type="button"></button>
-            </div>
-          </li>
-          <li class="element"> <img src="./images/kirill-pershin-1556355-unsplash-min.jpg" alt="Домбай" class="element__image">
-            <div class="element__box">
-              <h2 class="element__title">Домбай</h2>
-              <button class="element__heart" type="button"></button>
-            </div>
-          </li>
-          <li class="element"> <img src="./images/kirill-pershin-1404681-unsplash-min.jpg" alt="Гора Эльбрус" class="element__image">
-            <div class="element__box">
-              <h2 class="element__title">Гора Эльбрус</h2>
-              <button class="element__heart" type="button"></button>
-            </div>
-          </li>
-          <li class="element"> <img src="./images/kirill-pershin-1556355-unsplash-min.jpg" alt="Домбай" class="element__image">
-            <div class="element__box">
-              <h2 class="element__title">Домбай</h2>
-              <button class="element__heart" type="button"></button>
-            </div>
-          </li>
-          <li class="element"> <img src="./images/kirill-pershin-1404681-unsplash-min.jpg" alt="" class="element__image">
-            <div class="element__box">
-              <h2 class="element__title">Карачаевск</h2>
-              <button class="element__heart" type="button"></button>
-            </div>
-          </li>
-        </ul>
+        <ul class="elements__grid"> </ul>
       </section>
     </main>
     <footer class="footer">
@@ -70,7 +35,7 @@
     <div class="popup">
       <div class="popup__container">
         <button class="popup__close" type="button"></button>
-        <form class="popup__form" name="input">
+        <form class="popup__form" name="inputProfile">
           <h3 class="popup__title">Редактировать&nbsp;профиль</h3>
           <label>
             <input class="popup__input popup__input_type_title" required minlength="2" type="text" name="title" placeholder="Введите имя"> </label>
@@ -80,7 +45,37 @@
         </form>
       </div>
     </div>
+    <div class="popup popup_type_new-card">
+      <div class="popup__container">
+        <button class="popup__close" type="button"></button>
+        <form class="popup__form" name="inputCard">
+          <h3 class="popup__title">Новое&nbsp;место</h3>
+          <label>
+            <input class="popup__input popup__input_type_title-card" required minlength="2" type="text" name="title" placeholder="Название"> </label>
+          <label>
+            <input class="popup__input popup__input_type_subtitle-card" required minlength="2" type="text" name="subtitle" placeholder="Ссылка на картинку"> </label>
+          <button class="popup__save" type="submit">Сохранить</button>
+        </form>
+      </div>
+    </div>
   </div>
+  <section class="modal modal_none">
+    <div class="modal__container">
+      <button class="modal__close" type="button"></button> <img class="modal__img" src="" alt="image">
+      <p class="modal__title"></p>
+    </div>
+  </section>
+  <template id="template-elements">
+    <li class="element">
+      <div class="element__img-container">
+        <button class="element__delete" type="button"></button> <img src="" alt="" class="element__image"> </div>
+      <div class="element__box">
+        <h2 class="element__title"></h2>
+        <button class="element__heart" type="button"></button>
+      </div>
+    </li>
+  </template>
   <script src="./javascript/index.js"></script>
 </body>
+
 </html>
