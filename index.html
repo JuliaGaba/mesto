@@ -32,10 +32,10 @@
     <footer class="footer">
       <p class="footer__copyright">&copy;2023 Mesto Russia</p>
     </footer>
-    <div class="popup">
+    <div class="popup popup_type_edit-card">
       <div class="popup__container">
         <button class="popup__close" type="button"></button>
-        <form class="popup__form" name="inputProfile">
+        <form class="popup__form popup__form_edit" name="inputProfile">
           <h3 class="popup__title">Редактировать&nbsp;профиль</h3>
           <label>
             <input class="popup__input popup__input_type_title" required minlength="2" type="text" name="title" placeholder="Введите имя"> </label>
@@ -48,23 +48,24 @@
     <div class="popup popup_type_new-card">
       <div class="popup__container">
         <button class="popup__close" type="button"></button>
-        <form class="popup__form" name="inputCard">
+        <form class="popup__form popup__form_add" name="inputCard">
           <h3 class="popup__title">Новое&nbsp;место</h3>
           <label>
             <input class="popup__input popup__input_type_title-card" required minlength="2" type="text" name="title" placeholder="Название"> </label>
           <label>
-            <input class="popup__input popup__input_type_subtitle-card" required minlength="2" type="text" name="subtitle" placeholder="Ссылка на картинку"> </label>
+            <input class="popup__input popup__input_type_subtitle-card" required minlength="2" type="url" name="subtitle" placeholder="Ссылка на картинку"> </label>
           <button class="popup__save" type="submit">Сохранить</button>
         </form>
       </div>
     </div>
-  </div>
-  <section class="modal modal_none">
-    <div class="modal__container">
-      <button class="modal__close" type="button"></button> <img class="modal__img" src="." alt="image">
-      <p class="modal__title"></p>
+   <div class="popup popup_type_photo">
+      <div class="popup__container-photo">
+        <button class="popup__close" type="button"></button>
+        <img src="." alt="image" class="popup__image">
+        <p class="popup__title-photo"></p>
+      </div>
     </div>
-  </section>
+  </div>
   <template id="template-elements">
     <li class="element">
       <div class="element__img-container">
