@@ -7,10 +7,12 @@ const formCardAdd = document.querySelector(".popup__form_add");
 const nameInput = document.querySelector(".popup__input_type_title");
 const jobInput = document.querySelector(".popup__input_type_subtitle");
 const openPopupEditButton = document.querySelector(".profile__edit-button");
-let profileName = document.querySelector(".profile__title");
-let profileJob = document.querySelector(".profile__subtitle");
+const profileName = document.querySelector(".profile__title");
+const profileJob = document.querySelector(".profile__subtitle");
 const openAddPopupButton = document.querySelector(".profile__add-button");
 const cardListElement = document.querySelector(".elements__grid");
+const popupImg = popupPhoto.querySelector(".popup__image");
+const popupTitle = popupPhoto.querySelector(".popup__title-photo");
 const templateElement = document
   .querySelector("#template-elements")
   .content.querySelector(".element");
@@ -44,29 +46,26 @@ const initialCards = [
   },
 ];
 
-function popupOpened(item) {
+function openPopup(item) {
   item.classList.add("popup_opened");
 }
 
 function openEditPopup() {
   nameInput.value = profileName.textContent;
   jobInput.value = profileJob.textContent;
-  popupOpened(popupEditCard);
+  openPopup(popupEditCard);
 }
 
 function openPopupAdd() {
-  popupOpened(popupAddCard);
+  openPopup(popupAddCard);
 }
 
 function openPopupCard(img, title) {
-  const popupImg = popupPhoto.querySelector(".popup__image");
-  const popupTitle = popupPhoto.querySelector(".popup__title-photo");
   popupImg.src = img;
+  popupImg.alt = title;
   popupTitle.textContent = title;
-  popupPhoto
-    .querySelector(".popup__close")
-    .addEventListener("click", (e) => closePopup(e.target.closest(".popup")));
-  popupOpened(popupPhoto);
+  popupPhoto.querySelector(".popup__close");
+  openPopup(popupPhoto);
 }
 
 function closePopup(popup) {
@@ -88,7 +87,7 @@ function handleFormSubmitCard(e) {
   e.preventDefault();
   const valueName = nameCard.value;
   const valueUrl = urlCard.value;
-  createCard(valueName, valueUrl, true);
+  createCard(valueName, valueUrl);
   closePopup(e.target.closest(".popup"));
 }
 
@@ -103,30 +102,35 @@ function handlelikeACard(evt) {
   like.classList.toggle("element__heart_color_black");
 }
 
-function createCard(name, link, append = false) {
-  const todoElement = templateElement.cloneNode(true);
-  const textElement = todoElement.querySelector(".element__title");
-  const imgElement = todoElement.querySelector(".element__image");
+function createCard(name, link) {
+  const cardElement = templateElement.cloneNode(true);
+  const textElement = cardElement.querySelector(".element__title");
+  const imgElement = cardElement.querySelector(".element__image");
   textElement.textContent = name;
   imgElement.src = link;
   imgElement.alt = name;
-  const buttonDelElement = todoElement.querySelector(".element__delete");
-  cardListElement.prepend(todoElement);
-  addEvent(imgElement, todoElement, buttonDelElement, name, link);
-  return todoElement;
+  addEvent(imgElement, cardElement, name, link);
+  renderCard(cardElement);
+  return cardElement;
 }
 
-function addEvent(imgElement, todoElement, buttonDelElement, name, link) {
+function renderCard(cardElement) {
+  cardListElement.prepend(cardElement);
+}
+
+function addEvent(imgElement, cardElement, name, link) {
+  const buttonDelElement = cardElement.querySelector(".element__delete");
   buttonDelElement.addEventListener("click", function () {
-    todoElement.remove();
+    cardElement.remove();
   });
   imgElement.addEventListener("click", () => openPopupCard(link, name));
-  const cardLike = todoElement.querySelector(".element__heart");
+  const cardLike = cardElement.querySelector(".element__heart");
   cardLike.addEventListener("click", handlelikeACard);
 }
 
-initialCards.reverse().forEach(function (item, index, arr) {
-  createCard(item.name, item.link);
+initialCards.reverse().forEach(function (item) {
+  const card = createCard(item.name, item.link);
+  renderCard(card);
 });
 
 openPopupEditButton.addEventListener("click", openEditPopup);
