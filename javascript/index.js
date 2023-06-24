@@ -64,7 +64,6 @@ function openPopupCard(img, title) {
   popupImg.src = img;
   popupImg.alt = title;
   popupTitle.textContent = title;
-  popupPhoto.querySelector(".popup__close");
   openPopup(popupPhoto);
 }
 
@@ -87,8 +86,9 @@ function handleFormSubmitCard(e) {
   e.preventDefault();
   const valueName = nameCard.value;
   const valueUrl = urlCard.value;
-  createCard(valueName, valueUrl);
+  const cardElement = createCard(valueName, valueUrl);
   closePopup(e.target.closest(".popup"));
+  renderCard(cardElement);
 }
 
 closePopupButtonList.forEach((item) => {
@@ -110,7 +110,6 @@ function createCard(name, link) {
   imgElement.src = link;
   imgElement.alt = name;
   addEvent(imgElement, cardElement, name, link);
-  renderCard(cardElement);
   return cardElement;
 }
 
