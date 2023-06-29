@@ -48,6 +48,12 @@ const initialCards = [
 
 function openPopup(item) {
   item.classList.add("popup_opened");
+  document.addEventListener("keydown", function handleKeydownPopupClose(evt) {
+    if (evt.key === "Escape") {
+      closePopup(item);
+      document.removeEventListener("keydown", handleKeydownPopupClose);
+    }
+  });
 }
 
 function openEditPopup() {
@@ -59,7 +65,7 @@ function openEditPopup() {
 function openPopupAdd() {
   openPopup(popupAddCard);
 }
-
+// открытие фотки с описанием
 function openPopupCard(img, title) {
   popupImg.src = img;
   popupImg.alt = title;
@@ -76,6 +82,23 @@ function setProfile() {
   profileJob.textContent = jobInput.value;
 }
 
+function closeOverlay() {
+  document.querySelectorAll(".popup").forEach((item) =>
+    item.addEventListener("click", (e) => {
+      if (e.target.classList.contains("popup")) {
+        closePopup(e.target);
+      }
+    })
+  );
+}
+
+function closeEsc(evt) {
+  if (evt.key === "Escape") {
+    const openedPopup = document.querySelector(".popup_opened");
+    closePopup(openedPopup);
+  }
+}
+
 function handleFormSubmitProfile(e) {
   e.preventDefault();
   setProfile();
@@ -89,6 +112,8 @@ function handleFormSubmitCard(e) {
   const cardElement = createCard(valueName, valueUrl);
   closePopup(e.target.closest(".popup"));
   renderCard(cardElement);
+  nameCard.value = "";
+  urlCard.value = "";
 }
 
 closePopupButtonList.forEach((item) => {
@@ -131,6 +156,8 @@ initialCards.reverse().forEach(function (item) {
   const card = createCard(item.name, item.link);
   renderCard(card);
 });
+
+closeOverlay();
 
 openPopupEditButton.addEventListener("click", openEditPopup);
 formProfile.addEventListener("submit", handleFormSubmitProfile);

@@ -37,10 +37,14 @@
         <button class="popup__close" type="button"></button>
         <form class="popup__form popup__form_edit" name="inputProfile">
           <h3 class="popup__title">Редактировать&nbsp;профиль</h3>
-          <label>
-            <input class="popup__input popup__input_type_title" required minlength="2" type="text" name="title" placeholder="Введите имя"> </label>
-          <label>
-            <input class="popup__input popup__input_type_subtitle" required minlength="2" type="text" name="subtitle" placeholder="Расскажите о себе"> </label>
+          <label class="popup__label">
+            <input class="popup__input popup__input_type_title" required minlength="2" maxlength="40" type="text" name="username" placeholder="Введите имя">
+            <span id="username-error" class="error"></span>
+          </label>
+          <label class="popup__label">
+            <input class="popup__input popup__input_type_subtitle" required minlength="2" maxlength="200" type="text" name="job" placeholder="Расскажите о себе">
+            <span id="job-error" class="error"></span>
+           </label>
           <button class="popup__save" type="submit">Сохранить</button>
         </form>
       </div>
@@ -50,10 +54,14 @@
         <button class="popup__close" type="button"></button>
         <form class="popup__form popup__form_add" name="inputCard">
           <h3 class="popup__title">Новое&nbsp;место</h3>
-          <label>
-            <input class="popup__input popup__input_type_title-card" required minlength="2" type="text" name="title" placeholder="Название"> </label>
-          <label>
-            <input class="popup__input popup__input_type_subtitle-card" required minlength="2" type="url" name="subtitle" placeholder="Ссылка на картинку"> </label>
+          <label class="popup__label">
+            <input class="popup__input popup__input_type_title-card" required minlength="2" maxlength="30" type="text" name="name" placeholder="Название">
+            <span id="name-error" class="error"></span>
+          </label>
+          <label class="popup__label">
+            <input class="popup__input popup__input_type_subtitle-card" required type="url" name="link" placeholder="Ссылка на картинку">
+            <span id="link-error" class="error"></span>
+          </label>
           <button class="popup__save" type="submit">Сохранить</button>
         </form>
       </div>
@@ -76,6 +84,7 @@
       </div>
     </li>
   </template>
+  <script src="./javascript/validate.js"></script>
   <script src="./javascript/index.js"></script>
 </body>
 
