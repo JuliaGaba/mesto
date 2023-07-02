@@ -45,7 +45,7 @@
             <input class="popup__input popup__input_type_subtitle" required minlength="2" maxlength="200" type="text" name="job" placeholder="Расскажите о себе">
             <span id="job-error" class="error"></span>
            </label>
-          <button class="popup__save" type="submit">Сохранить</button>
+          <button class="popup__save popup__save_type_edit" type="submit">Сохранить</button>
         </form>
       </div>
     </div>
@@ -62,7 +62,7 @@
             <input class="popup__input popup__input_type_subtitle-card" required type="url" name="link" placeholder="Ссылка на картинку">
             <span id="link-error" class="error"></span>
           </label>
-          <button class="popup__save" type="submit">Сохранить</button>
+          <button class="popup__save popup__save_type_add" type="submit">Сохранить</button>
         </form>
       </div>
     </div>
@@ -85,6 +85,7 @@
     </li>
   </template>
   <script src="./javascript/validate.js"></script>
+  <script src="./javascript/initialcards.js"></script>
   <script src="./javascript/index.js"></script>
 </body>
 
