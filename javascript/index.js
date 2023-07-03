@@ -21,6 +21,8 @@ const nameCard = document.querySelector(".popup__input_type_title-card");
 const urlCard = document.querySelector(".popup__input_type_subtitle-card");
 const buttonSubmitEdit = document.querySelector(".popup__save_type_edit");
 const buttonSubmitAdd = document.querySelector(".popup__save_type_add");
+const [closeEditCard, closepopupAddCard, closepopupPhoto] =
+  buttonListClosePopup;
 
 function openPopup(item) {
   item.classList.add("popup_opened");
@@ -56,7 +58,6 @@ function openPopupCard(img, title) {
 function closePopup(popup) {
   popup.classList.remove("popup_opened");
   document.removeEventListener("keydown", handleKeydownPopupClose);
-  document.removeEventListener("mousedown", closeOverlay);
 }
 
 function setProfile() {
@@ -89,14 +90,6 @@ function handleFormSubmitCard(e) {
   renderCard(cardElement);
   formAddCard.reset();
 }
-
-buttonListClosePopup.forEach((item) => {
-  item.addEventListener("click", function () {
-    closePopup(popupEditCard);
-    closePopup(popupAddCard);
-    closePopup(popupPhoto);
-  });
-});
 
 function handlelikeACard(evt) {
   const like = evt.target;
@@ -135,6 +128,9 @@ initialCards.reverse().forEach(function (item) {
 
 closeOverlay();
 
+closeEditCard.addEventListener("click", () => closePopup(popupEditCard));
+closepopupAddCard.addEventListener("click", () => closePopup(popupAddCard));
+closepopupPhoto.addEventListener("click", () => closePopup(popupPhoto));
 buttonOpenPopupEdit.addEventListener("click", openEditPopup);
 formProfile.addEventListener("submit", handleFormSubmitProfile);
 formAddCard.addEventListener("submit", handleFormSubmitCard);
